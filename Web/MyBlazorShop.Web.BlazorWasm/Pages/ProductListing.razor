@@ -13,7 +13,7 @@
                     <ul class="display:flex flex-grow:1 flex-wrap:wrap margin-bottom:-32 margin-horizontal:-16">
                         @foreach(var product in Products)
                         {
-                            <ProductListingItem Product="product"></ProductListingItem>
+                            <ProductListingItem Product="@product"></ProductListingItem>
                         }
                     </ul>
                 </div>
@@ -28,8 +28,7 @@
     protected override void OnInitialized()
     {
         Products = productService.GetAll();
+
         base.OnInitialized();
     }
-
-
 }
